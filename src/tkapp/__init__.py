@@ -24,4 +24,3 @@ if not __name__ == __self_name__:
 
 
 print("**Initialized tkapp module**")
-sys.exit()
