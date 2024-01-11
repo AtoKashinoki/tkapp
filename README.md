@@ -11,7 +11,7 @@ Can be used to create window application.
    - [ ] descriptor
      - [ ] \_\_init__.py
      - [ ] Skeleton.py
-       - [ ] Skeleton class
+       - [x] Skeleton class
      - [ ] Validater.py
        - [ ] Skeleton class
        - [ ] DataType class

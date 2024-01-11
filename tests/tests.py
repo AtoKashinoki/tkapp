@@ -13,4 +13,5 @@ if __name__ == '__main__':
     root = tkinter.Tk()
     app = Application(root)
     app.mainloop()
+    print(type(tkapp.ErrorClasses))
 

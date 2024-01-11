@@ -26,32 +26,23 @@ if not __name__ == __self_name__:
 """ Initialize self process """
 
 
-# Import missing class
-class ImportMissing:
-    """
-        ImportMissing class.
+# ImportMissing class
+try:
+    from tkapp.error.MissingClass import (
+        ImportMissing,
+        import_missing_errors,
+    )
+except (ImportError, OSError) as message:
+    raise ImportError(message)
 
-    This class is used on import errors.
-    """
 
-    def __init__(self, package_name: str, error_message):
-        """
-            Register package name and error message.
-        :param package_name: Package name.
-        :param error_message: Error message when import package.
-        """
-        self.__name = package_name
-        self.__message = error_message
-        return
-
-    def __repr__(self):
-        return f"ImportError: {self.__name} -> {self.__message}"
+# Error classes
 
 
 try:
-    import tkapp.descriptor as descriptor
-except (ImportError, OSError) as e:
-    descriptor = ImportMissing("descriptor", e)
+    from tkapp.error import ErrorClasses
+except import_missing_errors as message:
+    ErrorClasses = ImportMissing("ErrorClass", message)
 
 
 print("**Initialized tkapp module**")
