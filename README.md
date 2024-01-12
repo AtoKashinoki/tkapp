@@ -10,10 +10,11 @@ Can be used to create window application.
    - [ ] \_\_init__.py
    - [ ] descriptor
      - [ ] \_\_init__.py
-     - [ ] Skeleton.py
+     - [x] Skeleton.py
        - [x] Skeleton class
-     - [ ] Validater.py
-       - [ ] Skeleton class
-       - [ ] DataType class
+     - [x] Validater.py
+       - [x] Skeleton class
+       - [x] DataType class
+       - [x] Attribute class
    - [ ] Application.py
      - [ ] Skeleton class

@@ -6,10 +6,10 @@ This file describe Skeleton class of descriptor.
 
 
 # import abc module
-import abc
+from abc import ABC
 
 
-class Skeleton(abc.ABC):
+class Skeleton(ABC):
     """
         Descriptor skeleton class.
 
@@ -24,12 +24,12 @@ class Skeleton(abc.ABC):
 
     @property
     def owner(self) -> object:
-        """ owner class """
+        """ Return owner class """
         return self.__owner
 
     @property
     def name(self) -> str:
-        """ attribute name """
+        """ Return attribute name """
         return self.__name
 
     def __set__(self, instance: object, value: any) -> None:
