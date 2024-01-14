@@ -45,4 +45,8 @@ except import_missing_errors as message:
     Error = ImportMissing("Error", message)
 
 
-print("**Initialized tkapp module**")
+print("**Initialized tkapp modules**")
+
+errors = ImportMissing.errors()
+if len(errors) != 0:
+    print(f"**tkapp modules import errors\n -> {errors}")
