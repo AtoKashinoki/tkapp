@@ -8,7 +8,7 @@ Can be used to create window application.
 ### Composition
  - [ ] **tkapp**
    - [ ] \_\_init__.py
-   - [ ] *descriptors*
+   - [x] *descriptors*
      - [x] Descriptor.py
        - [x] Skeleton class
      - [x] Validater.py
