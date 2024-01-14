@@ -1,4 +1,4 @@
-from tkapp.descriptor.Validator import DataType, Attribute
+from tkapp.Validator import DataType, Attribute
 
 
 class AttrTest:

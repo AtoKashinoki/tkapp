@@ -17,8 +17,8 @@ class Skeleton(ABC):
     Can be used to create descriptor classes.
     """
 
-    def __set_name__(self, owner: object, name: str) -> None:
-        """"""
+    def __set_name__(self, owner, name) -> None:
+        """ Create descriptor """
         self.__owner, self.__name = owner, name
         return
 

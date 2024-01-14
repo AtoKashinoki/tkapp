@@ -28,7 +28,7 @@ if not __name__ == __self_name__:
 
 # ImportMissing class
 try:
-    from tkapp.error.MissingClass import (
+    from tkapp.MissingModule import (
         ImportMissing,
         import_missing_errors,
     )
@@ -40,9 +40,9 @@ except (ImportError, OSError) as message:
 
 
 try:
-    from tkapp.error import ErrorClasses
+    import tkapp.Error
 except import_missing_errors as message:
-    ErrorClasses = ImportMissing("ErrorClass", message)
+    Error = ImportMissing("Error", message)
 
 
 print("**Initialized tkapp module**")

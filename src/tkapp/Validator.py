@@ -10,7 +10,7 @@ from abc import ABC, abstractmethod
 
 
 # import descriptor skeleton class
-from tkapp.descriptor.Skeleton import Skeleton as DescriptorSkeleton
+from tkapp.Descriptor import Skeleton as DescriptorSkeleton
 
 
 """ Skeleton """
@@ -20,7 +20,8 @@ class Skeleton(DescriptorSkeleton, ABC):
     """
         Validator skeleton class.
 
-    This class
+    This class is inheritance class.
+    Can be used to create Validator classes.
     """
 
     def __set__(self, instance, value) -> None:
@@ -29,7 +30,7 @@ class Skeleton(DescriptorSkeleton, ABC):
         return
 
     @abstractmethod
-    def validate(self, instance: object, value: any) -> None:
+    def validate(self, instance, value) -> None:
         """
             Validation method
         """
@@ -46,7 +47,7 @@ class DataType(Skeleton):
     This class is descriptor class that validate data type.
     """
 
-    def __init__(self, *validate_data_types: type or None or any, mode: str = "wr"):
+    def __init__(self, *validate_data_types, mode="wr"):
         """
             Initialize validate data types and set mode.
 
@@ -78,7 +79,7 @@ class DataType(Skeleton):
         self.__disable_validation = True
         return
 
-    def validate(self, instance: object, value: any) -> None:
+    def validate(self, instance, value) -> None:
         """ Validate data type """
         # disable
         if self.__disable_validation:
@@ -131,7 +132,7 @@ class Attribute(DataType):
         :param attributes: Attribute to register.
         :param mode: Self mode. (default: "wr")
         """
-        DataType.__init__(self, any, mode=mode)
+        super().__init__(any, mode=mode)
         self.__validate_attributes = attributes
         return
 
@@ -140,14 +141,12 @@ class Attribute(DataType):
         """ Return validate attributes """
         return self.__validate_attributes
 
-    def validate(self, instance: object, value: any) -> None:
+    def validate(self, instance, value) -> None:
         """ Validate attribute """
         # data type
         DataType.validate(self, instance, value)
 
         # attribute
-        print(value.__class__.__dict__)
-
         for attribute in self.__validate_attributes:
             if attribute in value.__attributes__:
                 return

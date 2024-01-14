@@ -6,11 +6,10 @@ Can be used to create window application.
 ## Develop
    
 ### Composition
- - [ ] tkapp
+ - [ ] **tkapp**
    - [ ] \_\_init__.py
-   - [ ] descriptor
-     - [ ] \_\_init__.py
-     - [x] Skeleton.py
+   - [ ] *descriptors*
+     - [x] Descriptor.py
        - [x] Skeleton class
      - [x] Validater.py
        - [x] Skeleton class

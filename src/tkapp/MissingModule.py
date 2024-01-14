@@ -11,14 +11,14 @@ class ImportMissing:
     This class is used on import errors.
     """
 
-    def __init__(self, package_name: str, error_message):
+    def __init__(self, package_name, message):
         """
             Register package name and error message.
         :param package_name: Package name.
-        :param error_message: Error message when import package.
+        :param message: Error message when import package.
         """
         self.__name = package_name
-        self.__message = error_message
+        self.__message = message
         return
 
     def __repr__(self):
