@@ -15,6 +15,8 @@ Can be used to create window application.
        - [x] Skeleton class
        - [x] DataType class
        - [x] Attribute class
+       - [x] DataTypeDict class
+       - [x] AttributeDict class
    - [x] *errors*
      - [x] Error.py
      - [x] MissingModule.py

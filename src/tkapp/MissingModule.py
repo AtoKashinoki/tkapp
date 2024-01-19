@@ -1,4 +1,8 @@
+"""
+    tkapp.MissingModule
 
+This file describe ImportMissing class and errors variables.
+"""
 # errors when import packages
 import_missing_errors = (ImportError, OSError)
 

@@ -1,5 +1,5 @@
 """
-   tkapp.descriptor.Skeleton
+   tkapp.Descriptor
 
 This file describe Skeleton class of descriptor.
 """
@@ -7,6 +7,9 @@ This file describe Skeleton class of descriptor.
 
 # import abc module
 from abc import ABC
+
+
+""" classes """
 
 
 class Skeleton(ABC):
