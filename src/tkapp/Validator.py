@@ -87,7 +87,10 @@ class DataType(Skeleton):
             return
 
         # mode
-        if "w" not in self.__mode and self.name in instance.__dict__.keys():
+        if (
+                "w" not in self.__mode and
+                self.name in instance.__dict__.keys()
+        ):
             raise TypeError(f" pass write mode ")
 
         # validate
