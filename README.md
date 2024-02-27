@@ -21,7 +21,7 @@ Can be used to create window application.
        - [x] import_missing_errors constant
        - [x] ImportMissing class
    - [ ] *others*
-     - [ ] Type.py
+     - [ ] DataType.py
      - [ ] Application.py
        - [ ] Skeleton class
      - [ ] Widget.py
