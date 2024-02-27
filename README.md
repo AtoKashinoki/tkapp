@@ -4,7 +4,7 @@ Can be used to create window application.
 ## Used
 
 ## Develop
-   
+  
 ### Composition
  - [ ] **tkapp**
    - [ ] \_\_init__.py
@@ -20,11 +20,10 @@ Can be used to create window application.
      - [x] MissingModule.py
        - [x] import_missing_errors constant
        - [x] ImportMissing class
-   - [ ] *inheritance*
-     - [ ] Application.py
-       - [ ] Skeleton class
    - [ ] *others*
      - [ ] Type.py
+     - [ ] Application.py
+       - [ ] Skeleton class
      - [ ] Widget.py
        - [ ] Skeleton class
        - [ ] Frame class
